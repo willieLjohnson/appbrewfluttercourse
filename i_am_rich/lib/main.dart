@@ -11,8 +11,7 @@ void main() {
         ),
         body: Center(
           child: Image(
-            image: NetworkImage(
-                'https://i2.wp.com/nairametrics.com/wp-content/uploads/2020/07/gold-2.jpg'),
+            image: AssetImage("images/diamond.png"),
           ),
         ),
       ),

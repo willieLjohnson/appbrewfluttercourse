@@ -9,19 +9,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromRGBO(33, 34, 34, 1),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                radius: 100.0,
-                backgroundImage: AssetImage('images/profile.png'),
+                radius: 90.0,
+                backgroundImage: AssetImage('images/profile.jpeg'),
               ),
               Text(
                 'Willie Johnson',
                 style: TextStyle(
                   fontFamily: 'MajorMonoDisplay',
-                  fontSize: 30,
+                  fontSize: 25,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2.5,
@@ -32,55 +33,48 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'SourceSansPro',
                   fontSize: 15,
-                  color: Colors.teal[100],
+                  color: Color.fromRGBO(234, 66, 54, 1),
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2.5,
                 ),
               ),
-              Container(
-                color: Colors.white,
+              SizedBox(
+                height: 20.0,
+                width: 150,
+                child: Divider(color: Color.fromRGBO(181, 182, 183, 1)),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      size: 25.0,
-                      color: Colors.teal.shade900,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Color.fromRGBO(234, 66, 54, 1),
+                  ),
+                  title: Text(
+                    '+1 240 907 8829',
+                    style: TextStyle(
+                      color: Color.fromRGBO(33, 34, 34, 1),
+                      fontFamily: "SourceSansPro",
+                      fontSize: 25.0,
                     ),
-                    SizedBox(width: 10.0),
-                    Text(
-                      '+1 240 907 8829',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: "SourceSansPro",
-                        fontSize: 30.0,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      size: 25.0,
-                      color: Colors.teal.shade900,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Color.fromRGBO(234, 66, 54, 1),
+                  ),
+                  title: Text(
+                    'liwa.johnson@gmail.com',
+                    style: TextStyle(
+                      color: Color.fromRGBO(33, 34, 34, 1.0),
+                      fontFamily: "SourceSansPro",
+                      fontSize: 25.0,
                     ),
-                    SizedBox(width: 10.0),
-                    Text(
-                      'liwa.johnson@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: "SourceSansPro",
-                        fontSize: 27.0,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
